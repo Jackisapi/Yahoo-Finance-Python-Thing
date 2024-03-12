@@ -1,18 +1,4 @@
-import yfinance as yf
 import pandas as pd
-
-
-def set_ticker(ticker_id):
-    try:
-        ticker = yf.Ticker(ticker_id)
-        # Initializes the Ticker from Yahoo Finance
-        ticker_data = (ticker_id, ticker)
-        # Sets the Ticker Name and the Ticker into a tuple (find better solution later) and returns
-        return ticker_data
-
-    except Exception as e:
-        print(f"Yo dawg i tried to get ticker {ticker_id} but i couldnt find it this be whi \n {e}")
-
 
 def num_formatter(column_name, file):
     pd.set_option('display.max_columns', None)

@@ -11,7 +11,7 @@ def num_formatter(column_name, file):
     return file
 
 
-def file_formatter(file_name='data.csv', write=False):
+def file_formatter_from_file(file_name='data.csv', write=False):
     file = pd.read_csv(file_name)
     # loads the file
     for column in file.columns:
@@ -28,3 +28,8 @@ def file_formatter(file_name='data.csv', write=False):
         return file
     else:
         return file
+
+
+def file_formatter_from_mem(data_pd):
+    for column in data_pd.columns:
+        print(column)

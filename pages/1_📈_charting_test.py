@@ -27,4 +27,3 @@ data = ff.file_formatter_from_file()
 st.write(data)
 
 chart = st.line_chart(data=data, x="Date", y=('Open', 'High', 'Low'), width=10000, use_container_width=True)
-

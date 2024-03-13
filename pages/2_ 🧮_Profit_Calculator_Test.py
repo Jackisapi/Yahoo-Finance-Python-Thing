@@ -1,4 +1,3 @@
-import time
 
 import streamlit as st
 import yahoo_man as yh
@@ -55,4 +54,4 @@ elif option == 'Adj Close':
 share_amount = st.number_input("How many shares do you have?")
 while share_amount == '':
     continue
-st.subheader(f"You earned {profit * share_amount} Before Taxes and whatnot")
+st.subheader(f"You earned {round(profit * share_amount,2)} Before Taxes and whatnot")

@@ -5,16 +5,16 @@ import file_functions as ff
 
 st.title("Stock Price Analysis")
 
-# ticker_id = st.text_input("Enter ticker (for example AMD) "\)
-# while ticker_id == '':
-#     continue
-#
-# s_date = st.text_input("Please enter a date (YYYY-MM-DD Format)")
-# while s_date == '':
-#     continue
+ticker_id = st.text_input("Enter ticker (for example AMD)")
+while ticker_id == '':
+    continue
 
-ticker_id = 'AMD'
-s_date = '2018-06-14'
+s_date = st.text_input("Please enter a date (YYYY-MM-DD Format)")
+while s_date == '':
+    continue
+
+# ticker_id = 'AMD'
+# s_date = '2018-06-14'
 
 e_date = str(date.today())
 
@@ -28,4 +28,3 @@ st.write(data)
 
 chart = st.line_chart(data=data, x="Date", y=('Open', 'High', 'Low'), width=10000, use_container_width=True)
 
-st.altair_chart(chart, use_container_width=True)
